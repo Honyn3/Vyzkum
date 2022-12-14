@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Výzkum</title>
+</head>
+
+<body>
+    <button class="prepinace" id="buttonstart" onclick="start()">Začít</button>
+    <div id="stranka">
+        <div id="scales">
+            <ul id="scaleLi">
+                <li id="scale1">Příšerné</li>
+                <li id="scale2">Špatné</li>
+                <li id="scale3">Neutrální</li>
+                <li id="scale4">Dobré</li>
+                <li id="scale5">Skvělé</li>
+            </ul>
+        </div>
+        <div id="gradient">
+        </div>
+
+        <div id="buttons">
+            <input type="button" value="" onclick="LeftButtonPressed(this)" id="colorButtonLeft">
+
+            <input type="range" name="slider" id="slider" max="100" min="0" onclick="MiddleButtonPressed()">
+
+            <input type="button" value="" onclick="RightButtonPressed()" id="colorButtonRight">
+
+
+        </div>
+
+        <div id="colorUpDiv">
+            <div id="colorDiv">
+
+                <ul id="preset">
+                    <li><button class="button button1" onclick="Barvy('#FF0000')"></button> <button
+                            class="button button2" onclick="Barvy('Green')"></button> <button class="button button3"
+                            onclick="Barvy('Yellow')"></button> <button class="button button4"
+                            onclick="Barvy('Orange')"></button> <button class="button button5"
+                            onclick="Barvy('blue')"></button></li>
+                    <li><button class="button button6" onclick="Barvy('Pink')"></button> <button class="button button7"
+                            onclick="Barvy('Purple')"></button> <button class="button button8"
+                            onclick="Barvy('brown')"></button> <button class="button button9"
+                            onclick="Barvy('White')"></button> <button class="button button10"
+                            onclick="Barvy('black')"></button></li>
+                    <li id="colorText">Pokročilé</li>
+                    <li><input type="color" value="#2EFFE3" onchange="Barvy(this.value)"></li>
+                </ul>
+            </div>
+        </div>
+        <p id="cislostranky">1/10</p>
+        <button class="prepinace" id="zpatky" onclick="zpatky()">Zpátky</button>
+        <span id="celydalsi" onclick="dalsi()"><button class="prepinace" id="dalsi">Další <svg width="24" height="20"
+                    xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+                    <path fill="white"
+                        d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
+                </svg></button></span>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
